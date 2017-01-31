@@ -10,7 +10,6 @@ import DOM.HTML.Indexed.DirValue (DirValue)
 import DOM.HTML.Indexed.FormMethod (FormMethod)
 import DOM.HTML.Indexed.InputType (InputType)
 import DOM.HTML.Indexed.KindValue (KindValue)
-import DOM.HTML.Indexed.LengthLiteral (LengthLiteral)
 import DOM.HTML.Indexed.MenuitemType (MenuitemType)
 import DOM.HTML.Indexed.MenuType (MenuType)
 import DOM.HTML.Indexed.OrderedListType (OrderedListType)
@@ -18,6 +17,8 @@ import DOM.HTML.Indexed.PreloadValue (PreloadValue)
 import DOM.HTML.Indexed.ScopeValue (ScopeValue)
 import DOM.HTML.Indexed.StepValue (StepValue)
 import DOM.HTML.Indexed.WrapValue (WrapValue)
+
+type CSSPixel = Int
 
 type GlobalAttributes r =
   ( id :: String
@@ -200,8 +201,8 @@ type HTMLbutton = Interactive
   )
 
 type HTMLcanvas = Interactive
-  ( width :: Number
-  , height :: Number
+  ( width :: CSSPixel
+  , height :: CSSPixel
   )
 
 type HTMLcaption = Interactive (onScroll :: Event)
@@ -240,10 +241,10 @@ type HTMLdt = Interactive (onScroll :: Event)
 type HTMLem = Interactive ()
 
 type HTMLembed = Interactive
-  ( height :: Number
+  ( height :: CSSPixel
   , src :: String
   , type :: MediaType
-  , width :: Number
+  , width :: CSSPixel
   )
 
 type HTMLfieldset = Interactive
@@ -300,19 +301,19 @@ type HTMLhtml = Interactive
 type HTMLi = Interactive ()
 
 type HTMLiframe = Noninteractive
-  ( height :: Number
+  ( height :: CSSPixel
   , name :: String
   , onLoad :: Event
   , sandbox :: String
   , src :: String
   , srcDoc :: String
-  , width :: Number
+  , width :: CSSPixel
   )
 
 type HTMLimg = Interactive
   ( alt :: String
   , crossOrigin :: CrossOriginValue
-  , height :: Number
+  , height :: CSSPixel
   , isMap :: Boolean
   , longDesc :: String
   , onAbort :: Event
@@ -320,7 +321,7 @@ type HTMLimg = Interactive
   , onLoad :: Event
   , src :: String
   , useMap :: String
-  , width :: Number
+  , width :: CSSPixel
   )
 
 type HTMLinput = Interactive
@@ -335,7 +336,7 @@ type HTMLinput = Interactive
   , formMethod :: FormMethod
   , formNoValidate :: Boolean
   , formTarget :: String
-  , height :: LengthLiteral
+  , height :: CSSPixel
   , list :: String
   , max :: Number
   , min :: Number
@@ -358,7 +359,7 @@ type HTMLinput = Interactive
   , step :: StepValue
   , type :: InputType
   , value :: String
-  , width :: LengthLiteral
+  , width :: CSSPixel
   )
 
 type HTMLins = Interactive
@@ -438,13 +439,13 @@ type HTMLnoscript = Interactive ()
 type HTMLobject = Interactive
   ( data :: String
   , form :: String
-  , height :: Number
+  , height :: CSSPixel
   , name :: String
   , onError :: Event
   , onScroll :: Event
   , type :: MediaType
   , useMap :: String
-  , width :: Number
+  , width :: CSSPixel
   )
 
 type HTMLol = Interactive
@@ -613,13 +614,13 @@ type HTMLvar = Interactive ()
 type HTMLvideo = Interactive
   ( autoplay :: Boolean
   , controls :: Boolean
-  , height :: Number
+  , height :: CSSPixel
   , loop :: Boolean
   , muted :: Boolean
   , poster :: String
   , preload :: PreloadValue
   , src :: String
-  , width :: Number
+  , width :: CSSPixel
   )
 
 type HTMLwbr = Interactive ()
