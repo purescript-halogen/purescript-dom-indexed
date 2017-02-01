@@ -12,6 +12,7 @@ import DOM.HTML.Indexed.InputType (InputType)
 import DOM.HTML.Indexed.KindValue (KindValue)
 import DOM.HTML.Indexed.MenuitemType (MenuitemType)
 import DOM.HTML.Indexed.MenuType (MenuType)
+import DOM.HTML.Indexed.OnOff (OnOff)
 import DOM.HTML.Indexed.OrderedListType (OrderedListType)
 import DOM.HTML.Indexed.PreloadValue (PreloadValue)
 import DOM.HTML.Indexed.ScopeValue (ScopeValue)
@@ -28,7 +29,6 @@ type GlobalAttributes r =
   , spellcheck :: Boolean
   , draggable :: Boolean
   , lang :: String
-  , translate :: String
   , dir :: DirValue
   , hidden :: Boolean
   , tabIndex :: Int
@@ -263,7 +263,7 @@ type HTMLfooter = Interactive ()
 type HTMLform = Interactive
   ( acceptCharset :: String
   , action :: String
-  , autocomplete :: Boolean
+  , autocomplete :: OnOff
   , enctype :: String
   , method :: String
   , name :: String
@@ -326,7 +326,7 @@ type HTMLimg = Interactive
 
 type HTMLinput = Interactive
   ( accept :: MediaType
-  , autocomplete :: String
+  , autocomplete :: OnOff
   , autofocus :: Boolean
   , checked :: Boolean
   , disabled :: Boolean
