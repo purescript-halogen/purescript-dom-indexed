@@ -621,6 +621,7 @@ type HTMLvideo = Interactive
   , preload :: PreloadValue
   , src :: String
   , width :: CSSPixel
+  , type :: MediaType
   )
 
 type HTMLwbr = Interactive ()
