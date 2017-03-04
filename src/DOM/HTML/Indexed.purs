@@ -3,6 +3,7 @@ module DOM.HTML.Indexed where
 import Data.DateTime (DateTime)
 import Data.MediaType (MediaType)
 import DOM.Event.Types (Event, MouseEvent, KeyboardEvent, FocusEvent, TouchEvent)
+import DOM.File.Types (FileList)
 import DOM.HTML.Event.Types (DragEvent)
 import DOM.HTML.Indexed.ButtonType (ButtonType)
 import DOM.HTML.Indexed.CrossOriginValue (CrossOriginValue)
@@ -345,6 +346,8 @@ type HTMLinput = Interactive
   , name :: String
   , onAbort :: Event
   , onChange :: Event
+  , files :: FileList
+  , onFilesSelected :: Event
   , onError :: Event
   , onInput :: Event
   , onInvalid :: Event
