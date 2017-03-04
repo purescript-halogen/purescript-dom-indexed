@@ -328,6 +328,7 @@ type HTMLinput = Interactive
   ( accept :: MediaType
   , autocomplete :: OnOff
   , autofocus :: Boolean
+  , capture :: Boolean
   , checked :: Boolean
   , disabled :: Boolean
   , form :: String
