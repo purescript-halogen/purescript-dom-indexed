@@ -1,7 +1,6 @@
 module DOM.HTML.Indexed where
 
-import Data.DateTime (DateTime)
-import Data.MediaType (MediaType)
+import DOM.Event.ClipboardEvent (ClipboardEvent)
 import DOM.Event.Types (Event, MouseEvent, KeyboardEvent, FocusEvent, TouchEvent)
 import DOM.HTML.Event.Types (DragEvent)
 import DOM.HTML.Indexed.ButtonType (ButtonType)
@@ -10,14 +9,16 @@ import DOM.HTML.Indexed.DirValue (DirValue)
 import DOM.HTML.Indexed.FormMethod (FormMethod)
 import DOM.HTML.Indexed.InputType (InputType)
 import DOM.HTML.Indexed.KindValue (KindValue)
-import DOM.HTML.Indexed.MenuitemType (MenuitemType)
 import DOM.HTML.Indexed.MenuType (MenuType)
+import DOM.HTML.Indexed.MenuitemType (MenuitemType)
 import DOM.HTML.Indexed.OnOff (OnOff)
 import DOM.HTML.Indexed.OrderedListType (OrderedListType)
 import DOM.HTML.Indexed.PreloadValue (PreloadValue)
 import DOM.HTML.Indexed.ScopeValue (ScopeValue)
 import DOM.HTML.Indexed.StepValue (StepValue)
 import DOM.HTML.Indexed.WrapValue (WrapValue)
+import Data.DateTime (DateTime)
+import Data.MediaType (MediaType)
 
 type CSSPixel = Int
 
@@ -111,7 +112,14 @@ type FocusEvents r =
   | r
   )
 
-type InteractiveEvents r = FocusEvents (TransitionEvents (KeyEvents (PointerEvents (TouchEvents (DragEvents (MouseEvents r))))))
+type ClipboardEvents r =
+  ( onCopy :: ClipboardEvent
+  , onCut :: ClipboardEvent
+  , onPaste :: ClipboardEvent
+  | r
+  )
+
+type InteractiveEvents r = ClipboardEvents (FocusEvents (TransitionEvents (KeyEvents (PointerEvents (TouchEvents (DragEvents (MouseEvents r)))))))
 
 type GlobalProperties r = GlobalAttributes (GlobalEvents r)
 
