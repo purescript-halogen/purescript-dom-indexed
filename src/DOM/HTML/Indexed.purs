@@ -272,8 +272,8 @@ type HTMLform = Interactive
   ( acceptCharset :: String
   , action :: String
   , autocomplete :: OnOff
-  , enctype :: String
-  , method :: String
+  , enctype :: MediaType
+  , method :: FormMethod
   , name :: String
   , noValidate :: Boolean
   , onReset :: Event
