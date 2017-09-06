@@ -21,6 +21,7 @@ data InputType
   | InputSubmit
   | InputTel
   | InputText
+  | InputTextArea
   | InputTime
   | InputUrl
   | InputWeek
@@ -47,6 +48,7 @@ renderInputType = case _ of
   InputSubmit -> "submit"
   InputTel -> "tel"
   InputText -> "text"
+  InputTextArea -> "textarea"
   InputTime -> "time"
   InputUrl -> "url"
   InputWeek -> "week"
