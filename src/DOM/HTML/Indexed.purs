@@ -1,7 +1,7 @@
 module DOM.HTML.Indexed where
 
 import DOM.Event.ClipboardEvent (ClipboardEvent)
-import DOM.Event.Types (Event, MouseEvent, KeyboardEvent, FocusEvent, TouchEvent)
+import DOM.Event.Types (Event, FocusEvent, KeyboardEvent, MouseEvent, TouchEvent, WheelEvent)
 import DOM.HTML.Event.Types (DragEvent)
 import DOM.HTML.Indexed.ButtonType (ButtonType)
 import DOM.HTML.Indexed.CrossOriginValue (CrossOriginValue)
@@ -119,7 +119,7 @@ type ClipboardEvents r =
   | r
   )
 
-type InteractiveEvents r = ClipboardEvents (FocusEvents (TransitionEvents (KeyEvents (PointerEvents (TouchEvents (DragEvents (MouseEvents r)))))))
+type InteractiveEvents r = ClipboardEvents (FocusEvents (TransitionEvents (KeyEvents (PointerEvents (TouchEvents (DragEvents (MouseEvents (onWheel :: WheelEvent | r))))))))
 
 type GlobalProperties r = GlobalAttributes (GlobalEvents r)
 
