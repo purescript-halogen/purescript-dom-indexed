@@ -5,7 +5,6 @@ data InputType
   | InputCheckbox
   | InputColor
   | InputDate
-  | InputDatetime
   | InputDatetimeLocal
   | InputEmail
   | InputFile
@@ -31,7 +30,6 @@ renderInputType = case _ of
   InputCheckbox -> "checkbox"
   InputColor -> "color"
   InputDate -> "date"
-  InputDatetime -> "datetime"
   InputDatetimeLocal -> "datetime-local"
   InputEmail -> "email"
   InputFile -> "file"
