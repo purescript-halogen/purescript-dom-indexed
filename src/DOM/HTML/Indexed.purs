@@ -1,8 +1,9 @@
 module DOM.HTML.Indexed where
 
-import DOM.Event.ClipboardEvent (ClipboardEvent)
-import DOM.Event.Types (Event, FocusEvent, KeyboardEvent, MouseEvent, TouchEvent, WheelEvent)
-import DOM.HTML.Event.Types (DragEvent)
+import DOM.Event.FocusEvent (FocusEvent)
+import DOM.Event.KeyboardEvent (KeyboardEvent)
+import DOM.Event.MouseEvent (MouseEvent)
+import DOM.Event.TouchEvent (TouchEvent)
 import DOM.HTML.Indexed.ButtonType (ButtonType)
 import DOM.HTML.Indexed.CrossOriginValue (CrossOriginValue)
 import DOM.HTML.Indexed.DirValue (DirValue)
@@ -19,6 +20,10 @@ import DOM.HTML.Indexed.StepValue (StepValue)
 import DOM.HTML.Indexed.WrapValue (WrapValue)
 import Data.DateTime (DateTime)
 import Data.MediaType (MediaType)
+import Web.Clipboard.ClipboardEvent (ClipboardEvent)
+import Web.Event.Types (Event)
+import Web.HTML.Event.DragEvent (DragEvent)
+import Web.UIEvent.WheelEvent (WheelEvent)
 
 type CSSPixel = Int
 
