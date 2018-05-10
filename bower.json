@@ -1,5 +1,5 @@
 {
-  
+
   "name": "purescript-dom-indexed",
   "homepage": "https://github.com/slamdata/purescript-dom-indexed",
   "description": "Typed DOM attributes and properties",
@@ -16,8 +16,9 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-prelude": "^3.0.0",
-    "purescript-media-types": "^3.0.0",
-    "purescript-dom": "^4.0.0"
+    "purescript-media-types": "#compiler/0.12",
+    "purescript-prelude": "#compiler/0.12",
+    "purescript-web-clipboard": "#compiler/0.12",
+    "purescript-web-touchevents": "#compiler/0.12"
   }
 }
