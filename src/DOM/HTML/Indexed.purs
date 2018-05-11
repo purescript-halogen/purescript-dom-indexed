@@ -1,9 +1,9 @@
 module DOM.HTML.Indexed where
 
-import DOM.Event.FocusEvent (FocusEvent)
-import DOM.Event.KeyboardEvent (KeyboardEvent)
-import DOM.Event.MouseEvent (MouseEvent)
-import DOM.Event.TouchEvent (TouchEvent)
+import Web.UIEvent.FocusEvent (FocusEvent)
+import Web.UIEvent.KeyboardEvent (KeyboardEvent)
+import Web.UIEvent.MouseEvent (MouseEvent)
+import Web.UIEvent.TouchEvent (TouchEvent)
 import DOM.HTML.Indexed.ButtonType (ButtonType)
 import DOM.HTML.Indexed.CrossOriginValue (CrossOriginValue)
 import DOM.HTML.Indexed.DirValue (DirValue)
