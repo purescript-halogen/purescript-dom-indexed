@@ -16,9 +16,9 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-media-types": "#compiler/0.12",
-    "purescript-prelude": "#compiler/0.12",
-    "purescript-web-clipboard": "#compiler/0.12",
-    "purescript-web-touchevents": "#compiler/0.12"
+    "purescript-media-types": "^4.0.0",
+    "purescript-prelude": "^4.0.0",
+    "purescript-web-clipboard": "^1.0.0",
+    "purescript-web-touchevents": "^1.0.0"
   }
 }
