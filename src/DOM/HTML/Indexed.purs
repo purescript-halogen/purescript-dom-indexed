@@ -4,6 +4,7 @@ import DOM.HTML.Indexed.ButtonType (ButtonType)
 import DOM.HTML.Indexed.CrossOriginValue (CrossOriginValue)
 import DOM.HTML.Indexed.DirValue (DirValue)
 import DOM.HTML.Indexed.FormMethod (FormMethod)
+import DOM.HTML.Indexed.InputAcceptType (InputAcceptType)
 import DOM.HTML.Indexed.InputType (InputType)
 import DOM.HTML.Indexed.KindValue (KindValue)
 import DOM.HTML.Indexed.MenuType (MenuType)
@@ -338,7 +339,7 @@ type HTMLimg = Interactive
   )
 
 type HTMLinput = Interactive
-  ( accept :: MediaType
+  ( accept :: InputAcceptType
   , autocomplete :: OnOff
   , autofocus :: Boolean
   , checked :: Boolean
