@@ -18,7 +18,7 @@
   "dependencies": {
     "purescript-media-types": "^4.0.0",
     "purescript-prelude": "^4.0.0",
-    "purescript-web-clipboard": "^1.0.0",
-    "purescript-web-touchevents": "^1.0.0"
+    "purescript-web-clipboard": "^2.0.0",
+    "purescript-web-touchevents": "^2.0.0"
   }
 }
