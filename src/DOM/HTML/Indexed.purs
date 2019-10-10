@@ -45,13 +45,14 @@ type GlobalAttributes r =
   )
 
 type GlobalEvents r =
-  ( onContextMenu :: Event
+  (
   | r
   )
 
 type MouseEvents r =
   ( onDoubleClick :: MouseEvent
   , onClick :: MouseEvent
+  , onContextMenu :: MouseEvent
   , onMouseDown :: MouseEvent
   , onMouseEnter :: MouseEvent
   , onMouseLeave :: MouseEvent
