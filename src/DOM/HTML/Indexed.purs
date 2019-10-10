@@ -46,6 +46,7 @@ type GlobalAttributes r =
 
 type GlobalEvents r =
   ( onContextMenu :: Event
+  , onInput :: Event
   | r
   )
 
@@ -359,7 +360,6 @@ type HTMLinput = Interactive
   , onAbort :: Event
   , onChange :: Event
   , onError :: Event
-  , onInput :: Event
   , onInvalid :: Event
   , onLoad :: Event
   , onSearch :: Event
@@ -581,7 +581,6 @@ type HTMLtextarea = Interactive
   , maxLength :: Int
   , name :: String
   , onChange :: Event
-  , onInput :: Event
   , onScroll :: Event
   , onSelect :: Event
   , placeholder :: String
