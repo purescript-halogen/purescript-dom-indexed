@@ -396,13 +396,24 @@ type HTMLli = Interactive
   )
 
 type HTMLlink = Noninteractive
-  ( crossOrigin :: CrossOriginValue
+  ( as :: String
+  , charset :: String
+  , crossOrigin :: CrossOriginValue
+  , disabled :: Boolean
   , href :: String
   , hreflang :: String
+  , importance :: String
+  , integrity :: String
   , media :: String
+  , methods :: String
   , onLoad :: Event
+  , prefetch :: String
+  , referrerpolicy :: String
   , rel :: String
+  , rev :: String
   , sizes :: String
+  , target :: String
+  , title :: String
   , type :: MediaType
   )
 
