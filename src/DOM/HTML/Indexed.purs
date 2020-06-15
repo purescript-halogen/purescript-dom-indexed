@@ -397,22 +397,19 @@ type HTMLli = Interactive
 
 type HTMLlink = Noninteractive
   ( as :: String
-  , charset :: String
+  , color :: String
   , crossOrigin :: CrossOriginValue
   , disabled :: Boolean
   , href :: String
   , hreflang :: String
-  , importance :: String
+  , imagesizes :: String
+  , imagesrcset :: String
   , integrity :: String
   , media :: String
-  , methods :: String
   , onLoad :: Event
-  , prefetch :: String
   , referrerpolicy :: String
   , rel :: String
-  , rev :: String
   , sizes :: String
-  , target :: String
   , title :: String
   , type :: MediaType
   )
