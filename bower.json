@@ -1,12 +1,12 @@
 {
 
   "name": "purescript-dom-indexed",
-  "homepage": "https://github.com/slamdata/purescript-dom-indexed",
+  "homepage": "https://github.com/purescript-halogen/purescript-dom-indexed",
   "description": "Typed DOM attributes and properties",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/slamdata/purescript-dom-indexed.git"
+    "url": "https://github.com/purescript-halogen/purescript-dom-indexed.git"
   },
   "ignore": [
     "**/.*",
@@ -16,9 +16,9 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-media-types": "^4.0.0",
-    "purescript-prelude": "^4.0.0",
-    "purescript-web-clipboard": "^2.0.0",
-    "purescript-web-touchevents": "^2.0.0"
+    "purescript-media-types": "main",
+    "purescript-prelude": "master",
+    "purescript-web-clipboard": "master",
+    "purescript-web-touchevents": "master"
   }
 }
