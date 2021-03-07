@@ -1,5 +1,4 @@
 {
-
   "name": "purescript-dom-indexed",
   "homepage": "https://github.com/purescript-halogen/purescript-dom-indexed",
   "description": "Typed DOM attributes and properties",
@@ -16,9 +15,9 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-media-types": "main",
-    "purescript-prelude": "master",
-    "purescript-web-clipboard": "master",
-    "purescript-web-touchevents": "master"
+    "purescript-media-types": "^5.0.0",
+    "purescript-prelude": "^5.0.0",
+    "purescript-web-clipboard": "^3.0.0",
+    "purescript-web-touchevents": "^3.0.0"
   }
 }
