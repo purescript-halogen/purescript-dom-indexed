@@ -1,5 +1,7 @@
 module DOM.HTML.Indexed.InputType where
 
+import Prelude
+
 data InputType
   = InputButton
   | InputCheckbox
@@ -23,6 +25,9 @@ data InputType
   | InputTime
   | InputUrl
   | InputWeek
+
+derive instance eqInputType :: Eq InputType
+derive instance ordInputType :: Ord InputType
 
 renderInputType :: InputType -> String
 renderInputType = case _ of
