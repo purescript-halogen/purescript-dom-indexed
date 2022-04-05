@@ -7,6 +7,9 @@ import Data.String as String
 
 newtype InputAcceptType = InputAcceptType (Array InputAcceptTypeAtom)
 
+derive instance eqInputAcceptType :: Eq InputAcceptType
+derive instance ordInputAcceptType :: Ord InputAcceptType
+
 instance semigroupInputAcceptType :: Semigroup InputAcceptType where
   append (InputAcceptType a) (InputAcceptType b) = InputAcceptType (a <> b)
 
@@ -19,6 +22,9 @@ extension ext = InputAcceptType [AcceptFileExtension ext]
 data InputAcceptTypeAtom
   = AcceptMediaType MediaType
   | AcceptFileExtension String
+
+derive instance eqInputAcceptTypeAtom :: Eq InputAcceptTypeAtom
+derive instance ordInputAcceptTypeAtom :: Ord InputAcceptTypeAtom
 
 renderInputAcceptType :: InputAcceptType -> String
 renderInputAcceptType (InputAcceptType atoms) =
