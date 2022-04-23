@@ -52,6 +52,7 @@ type GlobalEvents r =
 type MouseEvents r =
   ( onDoubleClick :: MouseEvent
   , onClick :: MouseEvent
+  , onAuxClick :: MouseEvent
   , onMouseDown :: MouseEvent
   , onMouseEnter :: MouseEvent
   , onMouseLeave :: MouseEvent
