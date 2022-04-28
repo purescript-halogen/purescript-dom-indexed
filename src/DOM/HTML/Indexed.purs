@@ -171,6 +171,7 @@ type HTMLaudio = Interactive
   , muted :: Boolean
   , preload :: PreloadValue
   , src :: String
+  , onError :: Event
   )
 
 type HTMLb = Interactive ()
@@ -638,6 +639,7 @@ type HTMLvideo = Interactive
   , src :: String
   , width :: CSSPixel
   , type :: MediaType
+  , onError :: Event
   )
 
 type HTMLwbr = Interactive ()
