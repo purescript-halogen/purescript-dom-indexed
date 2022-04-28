@@ -356,6 +356,8 @@ type HTMLinput = Interactive
   , list :: String
   , max :: Number
   , min :: Number
+  , maxLength :: Int
+  , minLength :: Int
   , multiple :: Boolean
   , name :: String
   , onAbort :: Event
