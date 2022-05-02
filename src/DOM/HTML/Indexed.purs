@@ -1,5 +1,6 @@
 module DOM.HTML.Indexed where
 
+import DOM.HTML.Indexed.AutocompleteType (AutocompleteType)
 import DOM.HTML.Indexed.ButtonType (ButtonType)
 import DOM.HTML.Indexed.CrossOriginValue (CrossOriginValue)
 import DOM.HTML.Indexed.DirValue (DirValue)
@@ -9,7 +10,6 @@ import DOM.HTML.Indexed.InputType (InputType)
 import DOM.HTML.Indexed.KindValue (KindValue)
 import DOM.HTML.Indexed.MenuType (MenuType)
 import DOM.HTML.Indexed.MenuitemType (MenuitemType)
-import DOM.HTML.Indexed.OnOff (OnOff)
 import DOM.HTML.Indexed.OrderedListType (OrderedListType)
 import DOM.HTML.Indexed.PreloadValue (PreloadValue)
 import DOM.HTML.Indexed.ScopeValue (ScopeValue)
@@ -280,7 +280,7 @@ type HTMLfooter = Interactive ()
 type HTMLform = Interactive
   ( acceptCharset :: String
   , action :: String
-  , autocomplete :: OnOff
+  , autocomplete :: AutocompleteType
   , enctype :: MediaType
   , method :: FormMethod
   , name :: String
@@ -343,7 +343,7 @@ type HTMLimg = Interactive
 
 type HTMLinput = Interactive
   ( accept :: InputAcceptType
-  , autocomplete :: OnOff
+  , autocomplete :: AutocompleteType
   , autofocus :: Boolean
   , checked :: Boolean
   , disabled :: Boolean
