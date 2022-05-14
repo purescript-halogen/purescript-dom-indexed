@@ -18,6 +18,7 @@
     "purescript-media-types": "^6.0.0",
     "purescript-prelude": "^6.0.0",
     "purescript-web-clipboard": "^4.0.0",
-    "purescript-web-touchevents": "^4.0.0"
+    "purescript-web-touchevents": "^4.0.0",
+    "purescript-web-pointerevents": "https://github.com/purescript-web/purescript-web-pointerevents.git#^1.0.0"
   }
 }

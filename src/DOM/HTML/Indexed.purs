@@ -24,6 +24,7 @@ import Web.TouchEvent (TouchEvent)
 import Web.UIEvent.FocusEvent (FocusEvent)
 import Web.UIEvent.KeyboardEvent (KeyboardEvent)
 import Web.UIEvent.MouseEvent (MouseEvent)
+import Web.PointerEvent (PointerEvent)
 import Web.UIEvent.WheelEvent (WheelEvent)
 
 type CSSPixel = Int
@@ -87,16 +88,16 @@ type TouchEvents r =
   )
 
 type PointerEvents r =
-  ( onPointerOver :: Event
-  , onPointerEnter :: Event
-  , onPointerDown :: Event
-  , onPointerMove :: Event
-  , onPointerUp :: Event
-  , onPointerCancel :: Event
-  , onPointerOut :: Event
-  , onPointerLeave :: Event
-  , gotPointerCapture :: Event
-  , lostPointerCapture :: Event
+  ( onPointerOver :: PointerEvent
+  , onPointerEnter :: PointerEvent
+  , onPointerDown :: PointerEvent
+  , onPointerMove :: PointerEvent
+  , onPointerUp :: PointerEvent
+  , onPointerCancel :: PointerEvent
+  , onPointerOut :: PointerEvent
+  , onPointerLeave :: PointerEvent
+  , onGotPointerCapture :: PointerEvent
+  , onLostPointerCapture :: PointerEvent
   | r
   )
 
