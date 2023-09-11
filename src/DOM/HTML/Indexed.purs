@@ -48,6 +48,7 @@ type GlobalAttributes r =
 type GlobalEvents r =
   ( onContextMenu :: Event
   , onInput :: Event
+  , onBeforeInput :: Event
   | r
   )
 
