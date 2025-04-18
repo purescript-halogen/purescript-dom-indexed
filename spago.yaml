@@ -1,0 +1,24 @@
+package:
+  name: dom-indexed
+  description: Typed DOM attributes and properties
+  publish:
+    license: Apache-2.0
+    version: 12.0.0
+    location:
+      githubOwner: purescript-halogen
+      githubRepo: purescript-dom-indexed
+  dependencies:
+    - datetime: ">=6.1.0 <7.0.0"
+    - media-types: ">=6.0.0 <7.0.0"
+    - prelude: ">=6.0.2 <7.0.0"
+    - strings: ">=6.0.1 <7.0.0"
+    - web-clipboard: ">=6.0.0 <7.0.0"
+    - web-events: ">=4.0.0 <5.0.0"
+    - web-html: ">=4.1.0 <5.0.0"
+    - web-pointerevents: ">=2.0.0 <3.0.0"
+    - web-touchevents: ">=4.0.0 <5.0.0"
+    - web-uievents: ">=5.0.0 <6.0.0"
+workspace:
+  packageSet:
+    registry: 64.1.1
+  extraPackages: {}

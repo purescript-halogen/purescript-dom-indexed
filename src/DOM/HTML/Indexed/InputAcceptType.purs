@@ -14,10 +14,10 @@ instance semigroupInputAcceptType :: Semigroup InputAcceptType where
   append (InputAcceptType a) (InputAcceptType b) = InputAcceptType (a <> b)
 
 mediaType :: MediaType -> InputAcceptType
-mediaType mt = InputAcceptType [AcceptMediaType mt]
+mediaType mt = InputAcceptType [ AcceptMediaType mt ]
 
 extension :: String -> InputAcceptType
-extension ext = InputAcceptType [AcceptFileExtension ext]
+extension ext = InputAcceptType [ AcceptFileExtension ext ]
 
 data InputAcceptTypeAtom
   = AcceptMediaType MediaType
