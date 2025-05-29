@@ -642,6 +642,7 @@ type HTMLvideo = Interactive
   , width :: CSSPixel
   , type :: MediaType
   , onError :: Event
+  , onTimeUpdate :: Event
   )
 
 type HTMLwbr = Interactive ()
