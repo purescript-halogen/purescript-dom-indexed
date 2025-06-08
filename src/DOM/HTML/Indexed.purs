@@ -129,11 +129,48 @@ type ClipboardEvents r =
   | r
   )
 
+type MediaEvents r =
+  ( onLoadStart :: Event
+  , onProgress :: Event
+  , onSuspend :: Event
+  , onAbort :: Event
+  , onError :: Event
+  , onEmptied :: Event
+  , onStalled :: Event
+  , onLoadedMetadata :: Event
+  , onLoadedData :: Event
+  , onCanPlay :: Event
+  , onCanPlayThrough :: Event
+  , onPlaying :: Event
+  , onWaiting :: Event
+  , onSeeking :: Event
+  , onSeeked :: Event
+  , onEnded :: Event
+  , onDurationChange :: Event
+  , onTimeUpdate :: Event
+  , onPlay :: Event
+  , onPause :: Event
+  , onRateChange :: Event
+  , onResize :: Event
+  , onVolumeChange :: Event
+  | r
+  )
+
 type InteractiveEvents r = ClipboardEvents (FocusEvents (TransitionEvents (KeyEvents (PointerEvents (TouchEvents (DragEvents (MouseEvents (onWheel :: WheelEvent | r))))))))
 
 type GlobalProperties r = GlobalAttributes (GlobalEvents r)
 
 type Interactive r = InteractiveEvents (GlobalProperties r)
+
+type Media r = Interactive (MediaEvents
+  ( autoplay :: Boolean
+  , controls :: Boolean
+  , loop :: Boolean
+  , muted :: Boolean
+  , preload :: PreloadValue
+  , src :: String
+  | r
+  ))
 
 type Noninteractive r = GlobalProperties r
 
@@ -166,15 +203,7 @@ type HTMLarticle = Interactive ()
 
 type HTMLaside = Interactive ()
 
-type HTMLaudio = Interactive
-  ( autoplay :: Boolean
-  , controls :: Boolean
-  , loop :: Boolean
-  , muted :: Boolean
-  , preload :: PreloadValue
-  , src :: String
-  , onError :: Event
-  )
+type HTMLaudio = Media ()
 
 type HTMLb = Interactive ()
 
@@ -630,19 +659,11 @@ type HTMLul = Interactive (onScroll :: Event)
 
 type HTMLvar = Interactive ()
 
-type HTMLvideo = Interactive
-  ( autoplay :: Boolean
-  , controls :: Boolean
-  , height :: CSSPixel
-  , loop :: Boolean
-  , muted :: Boolean
+type HTMLvideo = Media
+  ( height :: CSSPixel
   , poster :: String
-  , preload :: PreloadValue
-  , src :: String
   , width :: CSSPixel
   , type :: MediaType
-  , onError :: Event
-  , onTimeUpdate :: Event
   )
 
 type HTMLwbr = Interactive ()
